@@ -3,6 +3,10 @@
   "private": true,
   "dependencies": {
     "bootstrap": "~3.3.2",
-    "jquery.validate": "~1.13.0"
+    "jquery.validate": "~1.13.0",
+    "jquery.complexify.js": "*"
+  },
+  "devDependencies": {
+    "jquery.complexify.js": "*"
   }
 }

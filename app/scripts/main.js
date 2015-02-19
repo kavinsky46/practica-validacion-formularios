@@ -107,26 +107,26 @@ $("#nombre").focusout(function (){
     }
 });
 
-// Se cambian los label si es particular o empresa.
-$("#demandante").change(function (){
-	if ($("#empresa").is(":checked")) {
-		$("#nombre_empresa").val("");
-		$("#label_nombre").text("Empresa:");
-		$("#label_nif").text("Cif:");
-		$('label[for="nif"]').hide();
-		$("#nif").val('').hide();
-		$("#cif").show();
-		$('label[for="cif"]').show();
-	}
-	else {
-		$("#label_nombre").text("Nombre:");  
-		$("#label_nif").text("Nif:"); 
-		$("#nombre_empresa").val($("#nombre").val()+" "+$("#apellidos").val());
-		$('label[for="cif"]').hide();
-		$("#cif").val('').hide();
-		$("#nif").show();
-		$('label[for="nif"]').show();
-	}
+// Se cambian los label si es particular.
+$("#particular").change(function (){
+	$("#label_nombre").text("Nombre:");  
+	$("#label_nif").text("Nif:"); 
+	$("#nombre_empresa").val($("#nombre").val()+" "+$("#apellidos").val());
+	$('label[for="cif"]').hide();
+	$("#cif").val('').hide();
+	$("#nif").show();
+	$('label[for="nif"]').show();
+});
+
+// Se cambian los label si es empresa.
+$("#empresa").change(function (){
+	$("#nombre_empresa").val("");
+	$("#label_nombre").text("Empresa:");
+	$("#label_nif").text("Cif:");
+	$('label[for="nif"]').hide();
+	$("#nif").val('').hide();
+	$("#cif").show();
+	$('label[for="cif"]').show();
 });
 
 // Metodo para comprobar el cif.
@@ -309,3 +309,8 @@ jQuery.validator.addMethod("iban", function(value, element) {
 	});
 }(jQuery));
 
+$("#pass").focusin(function () {
+	$("#pass").complexify({}, function (valid, complexity) {
+		$("#complex").attr("value",complexity);
+	});
+});
