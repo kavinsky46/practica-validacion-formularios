@@ -1,4 +1,5 @@
-$('#formula').validate({
+
+$("#formula").validate({
 	rules:{
 		nombre:'required',
 		apellidos:'required',
@@ -55,12 +56,19 @@ $('#formula').validate({
 			equalTo:pass
 		}
 	},
+	messages: {
+		email: {
+			remote: "Correo ya utilizado."
+		},
+		nif: {
+			remote: "NIF ya utilizado."
+		}
+	},	
 	// Se pide la confirmacion de alta si todo es correcto
-    submitHandler : function(form) {
-		'use strict';
+    submitHandler : function() {
         var usuario=$('#usuario').val();
         var cuota=$('input[name="pago"]:checked').val();
-		var aceptar=confirm('Va a dar de alta el usuario: '+usuario+' y se cobrara la primera cuota de '+cuota+' € ¿Desea continuar ?');
+		var aceptar=confirm('Va a dar de alta el usuario: '+usuario+' y se cobrara la primera cuota de '+cuota+' € ¿Desea continuar?');
 		if (aceptar==1){ // ===true
 			alert('Nuevo usuario dado de alta: '+usuario);
 		}
@@ -297,6 +305,13 @@ jQuery.validator.addMethod('iban', function(value, element) {
 	return cRest === 1;
 }, 'IBAN incorrecto.');
 
+// Metodo para la contraseña
+$('#pass').focusin(function () {
+	$('#pass').complexify({}, function (valid, complexity) {
+		$('#complex').attr('value',complexity);
+	});
+});
+
 // Mensajes en español.
 (function ($) {
 	$.extend($.validator.messages, {
@@ -304,14 +319,7 @@ jQuery.validator.addMethod('iban', function(value, element) {
 		email: 'Email incorrecto.',
 		digits: 'Debes escribir dígitos.',
 		equalTo: 'Campo incorrecto.',
-		remote: 'Usuario ya registrado.',
 		maxlength: $.validator.format('No debes escribir más de {0} caracteres.'),
 		minlength: $.validator.format('Debes escribir al menos {0} caracteres.')		
 	});
 }(jQuery));
-
-$('#pass').focusin(function () {
-	$('#pass').complexify({}, function (valid, complexity) {
-		$('#complex').attr('value',complexity);
-	});
-});
