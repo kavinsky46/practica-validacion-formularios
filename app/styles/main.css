@@ -31,7 +31,23 @@ body {
 #cif {
   display: none;
 }​
-
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-top: 300px;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+meter{
+	color: red;
+	height: 23px;
+	width: 140px;
+}
 .formCont {
 	margin:50px auto 0;
 	width:80%;
@@ -45,4 +61,9 @@ body {
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.error {
+	font-size:14px;
+	color:red;
 }

@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<div id="contenedor" class="formCont">
-			<form novalidate action="" method="post" id="formulario" class="form-horizontal">
+			<form novalidate action="accion.php" method="post" id="formula" class="form-horizontal">
 				<fieldset>
 					<legend>Información de contacto</legend>
 					<div class="form-group">
@@ -63,7 +63,7 @@
 								<option>A traves de un amigo o conocido</option>
 							</select>
 						</div>
-					</div>	
+					</div><br>
 				</fieldset>
 				<fieldset>
 					<legend>Datos de facturaci&oacute;n</legend>
@@ -72,7 +72,7 @@
 						<div class="col-md-3" id="demandante">
 							<div class="radio">
 								<label for="particular">
-									<input type="radio" name="demandante" id="particular"> Particular
+									<input type="radio" name="demandante" id="particular" checked="true"> Particular
 								</label>
 							</div>
 							<div class="radio">
@@ -436,21 +436,21 @@
 						<div class="col-md-3">
 							<div class="radio">
 								<label for="pago">
-									<input type="radio" name="pago" id="pago" value="50" checked="true"> Mensual
+									<input type="radio" name="pago" id="mensual" value="50" checked="true"> Mensual
 								</label>
 							</div>
 							<div class="radio">
 								<label for="pago">
-									<input type="radio" name="pago" id="pago" value="140"> Trimestral
+									<input type="radio" name="pago" id="trimestral" value="140"> Trimestral
 								</label>
 							</div>
 							<div class="radio">
 								<label for="pago">
-									<input type="radio" name="pago" id="pago" value="550"> Anual
+									<input type="radio" name="pago" id="anual" value="550"> Anual
 								</label>
 							</div>
 						</div>
-					</div>
+					</div><br>
 				</fieldset>
 				<fieldset>
 					<legend>Datos de acceso</legend>
@@ -480,7 +480,7 @@
 					</div>
 				</fieldset>
 				<div>
-					<input type="submit" value="Enviar"/>
+					<input class="col-md-2" type="submit" value="Enviar"/>
 				</div>
 			</form>
 		</div>
