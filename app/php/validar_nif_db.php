@@ -23,7 +23,7 @@
 
 		$valid = '"true"';
 		if ($sql->rowCount() > 0) {
-			$valid='"false"';
+			$valid='"NIF ya existente"';
 		}
 	}
 	echo $valid;

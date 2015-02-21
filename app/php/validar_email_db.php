@@ -25,7 +25,7 @@
 		
 		$valid = '"true"';
 		if ($sql->rowCount() > 0) {
-			$valid='"false"';
+			$valid='"Email ya existente."';
 		}
 	}
 	echo $valid;

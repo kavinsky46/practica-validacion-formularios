@@ -68,7 +68,7 @@ $("#formula").validate({
     submitHandler : function() {
         var usuario=$('#usuario').val();
         var cuota=$('input[name="pago"]:checked').val();
-		var aceptar=confirm('Va a dar de alta el usuario: '+usuario+' y se cobrara la primera cuota de '+cuota+' € ¿Desea continuar?');
+		var aceptar=confirm('Va a dar de alta el usuario: '+usuario+' y se cobrara la primera cuota de '+cuota+' €');
 		if (aceptar==1){ // ===true
 			alert('Nuevo usuario dado de alta: '+usuario);
 		}
