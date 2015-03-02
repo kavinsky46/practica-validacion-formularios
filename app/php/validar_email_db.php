@@ -3,6 +3,9 @@
 	/* Descomentaríamos la siguiente línea para mostrar errores de php en el fichero: */
 	// ini_set('display_errors', '1');
 	/* Definimos los parámetros de conexión con la bbdd: */
+	$dbinfo = "mysql:dbname=eguzkicamarero_users;host=localhost";
+	$user = "123456";
+	$pass = "123456";
 	//Nos intentamos conectar:
 	try {
 		/* conectamos con bbdd e inicializamos conexión como UTF8 */
@@ -13,8 +16,6 @@
 	}
 	/* Para hacer debug cargaríamos a mano el parámetro, descomentaríamos la siguiente línea: */
 	//$_REQUEST['email'] = "juandacorreo@gmail.com";
-	//$_REQUEST['email'] = "g@g.g";	
-	//$valid = 'false';
 	if (isset($_REQUEST['email'])) {
 		/* La línea siguiente la podemos descomentar para ver desde firebug-xhr si se pasa bien el parámetro desde el formulario */
 		//echo $_REQUEST['email'];

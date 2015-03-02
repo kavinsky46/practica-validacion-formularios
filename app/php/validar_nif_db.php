@@ -3,6 +3,9 @@
 	/* Descomentaríamos la siguiente línea para mostrar errores de php en el fichero: */
 	//ini_set('display_errors', '1');
 	/* Definimos los parámetros de conexión con la bbdd: */
+	$dbinfo = "mysql:dbname=eguzkicamarero_users;host=localhost";
+	$user = "123456";
+	$pass = "123456";
 	//Nos intentamos conectar:
 	try {
 		/* conectamos con bbdd e inicializamos conexión como UTF8 */

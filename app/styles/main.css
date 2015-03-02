@@ -5,8 +5,8 @@ body {
 }
 
 .hero-unit {
-  margin: 50px auto 0 auto;
-  width: 500px;
+  margin: 30px auto 0 auto;
+  width: 440px;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
@@ -35,13 +35,15 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-top: 50px;
   margin-bottom: 20px;
-  font-size: 21px;
+  font-size: 28px;
   line-height: inherit;
-  color: #333;
+  color: DarkBlue;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
+}
+fieldset {
+  margin-bottom: 30px;
 }
 meter{
 	color: red;
@@ -50,7 +52,7 @@ meter{
 }
 .formCont {
 	margin:50px auto 0;
-	width:80%;
+	width:70%;
 	font-size:18px;
 	font-weight:200;
 	line-height:30px;
@@ -62,7 +64,9 @@ meter{
 	margin-right: auto;
 	margin-left: auto;
 }
-
+.enviar {
+	padding-left: 40%;
+}
 .error {
 	font-size:14px;
 	color:red;

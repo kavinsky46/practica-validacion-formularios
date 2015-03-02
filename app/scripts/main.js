@@ -50,6 +50,7 @@ $("#formula").validate({
 		},
 		pass:{
 			required:true,
+			complexPass:true,
 			minlength:6  
 		},
 		passConf:{
@@ -136,6 +137,17 @@ $('#empresa').change(function (){
 	$('#cif').show();
 	$('label[for="cif"]').show();
 });
+
+// Metodo para comprobar la complejidad de la contraseña.
+jQuery.validator.addMethod('complexPass', function(value, element) {
+	var level = $('#complex').attr('value');
+	if(level>=35){
+		return true;
+	}
+	else{
+		return false;
+	}
+}, 'Debes usar una contraseña segura.');
 
 // Metodo para comprobar el cif.
 jQuery.validator.addMethod('cif', function(value, element) {
